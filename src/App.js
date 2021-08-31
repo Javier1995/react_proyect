@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import  Card from './Components/Card.js'
 import './App.css';
 
+
 function App() {
+
+  const cards = [
+    {
+      title:"Estes es un titulo de prueba",
+      content: "Este es un ejemplode contendio por agregar"
+    },
+    {
+      title:"Estes es un titulo de prueba2",
+      content: "Este es un ejemplode contendio por agregar2"
+    },
+    {
+      title:"Estes es un titulo de prueba3",
+      content: "Este es un ejemplode contendio por agregar3"
+    }
+  ]
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+     <Card title={cards[0].title} content={cards[0].content} />
+     <Card title={cards[1].title} content={cards[1].content} />
+     <Card title={cards[2].title} content={cards[2].content} />
+   </div>
   );
 }
 
